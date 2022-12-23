@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Windows10_manuel\\Desktop\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg.csproj",
+      "projectUniqueName": "D:\\GitHub\\WebProgramlama\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg.csproj",
       "projectName": "HayvanBarinagi_WebProg",
-      "projectPath": "D:\\Windows10_manuel\\Desktop\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg.csproj",
+      "projectPath": "D:\\GitHub\\WebProgramlama\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg.csproj",
       "packagesPath": "C:\\Users\\Metin Kaim\\.nuget\\packages\\",
-      "outputPath": "D:\\Windows10_manuel\\Desktop\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg\\obj\\",
+      "outputPath": "D:\\GitHub\\WebProgramlama\\HayvanBarinagi_WebProg\\HayvanBarinagi_WebProg\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Metin Kaim\\AppData\\Roaming\\NuGet\\NuGet.Config",

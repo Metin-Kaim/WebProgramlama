@@ -1,5 +1,4 @@
-﻿@using TraverTripProject.Models.Siniflar
-@model List<Blog>
+﻿@using HayvanBarinagi_WebProg.Models.Siniflar
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -18,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="wrap">
             <div class="banner">
                 <div class="indent">
-                    <h2 class="indent-left margin-bot">Plan the Easy Trip</h2>
+                    <h2 class="indent-left margin-bot">Kolayca Hayvan Sahiplen</h2>
                     <div class="banner-left">
                         <div class="con-text">
                             <div class="grid1-img">
@@ -62,13 +61,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                         <div class="slider" style="width:650px;height:365px">
                             <ul class="rslides" id="slider1">
-                                @foreach (var x in Model)
-                                {
-                                    <li><img src="@x.BlogImage" alt=""></li>
-                                    @*<li><img src="~/web/images/img2.jpg" alt=""></li>
-                                <li><img src="~/web/images/img3.jpg" alt=""></li>
-                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
-                                }
                             </ul>
                         </div>
                     </div>
@@ -89,12 +81,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         gezip gördüğüm yerleri sizlerle paylaşmak
                         için kodlamasını tamamen kendim yaptığım
                         mvc 5 üzerine kurulu dinamik bir web projesi geliştirdik.
-                        Hem Türkiye'den hem de yurt dışından gezip gördüğüm yerleri 
+                        Hem Türkiye'den hem de yurt dışından gezip gördüğüm yerleri
                         blog yazıları olarak sizlerle paylaşma niyetindeyim.
                         Umuyorum ki yazdıklarımı bepenirsiniz, keyifli okumalar, sağlıklı günler
                     </p>
                 </div>
-                @Html.Partial("Partial1")
+                @*Html.Partial("Partial1")*@
                 <div class="grids">
                     <div class="box1">
                         <div class="padding">
