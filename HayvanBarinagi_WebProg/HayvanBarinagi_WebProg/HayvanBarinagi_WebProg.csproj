@@ -10,4 +10,8 @@
     <None Remove="Controllers\BlogController.cs~RF2b781c.TMP" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Models\About\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
