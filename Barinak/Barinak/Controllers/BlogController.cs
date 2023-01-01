@@ -12,7 +12,7 @@ namespace Barinak.Controllers
 		{
 			//var degerler=c.Blogs.ToList();
 			by.Deger1=c.Blogs.ToList();
-			by.Deger3=c.Blogs.OrderByDescending(x=>x.ID).Take(3).ToList();
+			by.Deger3=c.Blogs.OrderByDescending(x=>x.ID).Take(5).ToList();
 			return View(by);
 		}
         public IActionResult BlogDetay(int id)
@@ -39,6 +39,7 @@ namespace Barinak.Controllers
 			return RedirectToAction("BlogDetay");
 		}
 
+		
 
 	}
 }

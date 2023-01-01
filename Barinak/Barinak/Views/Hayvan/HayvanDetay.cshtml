@@ -31,11 +31,12 @@
 
                 <div class="single-grid">
                     <img src="@Model.FotoUrl" alt="" style="height:450px;width:650px;" />
-                    <h2>@Model.Adi</h2><br />
-                    <h2>@Model.Yas</h2><br />
-                    <h2>@Model.Cinsiyet</h2><br />
-
-                    <p>@Model.Aciklama</p>
+                    <p><b>Adi: @Model.Adi</b></p>
+                    <p><b>Yaş:</b> @Model.Yas</p>
+                    <p><b>Cinsiyet:</b> @Model.Cinsiyet</p>
+                    <p><b>Açıklama:</b> @Model.Aciklama</p>
+                    <br />
+                    <a href="/Hayvan/HayvanSahiplen/@Model.ID" class="btn btn-info">Sahiplen</a>
 
                 </div>
 

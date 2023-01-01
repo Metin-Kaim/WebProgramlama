@@ -1,0 +1,15 @@
+﻿@model Barinak.Models.Siniflar.Turler
+
+@{
+    ViewData["Title"] = "YeniTur";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Tür Ekleme</h1>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x=>x.TurAd)
+    @Html.TextBoxFor(x=>x.TurAd, new {@class="form-control"})
+    <br />
+    <button class="btn btn-primary">Tür Ekle</button>
+</form>

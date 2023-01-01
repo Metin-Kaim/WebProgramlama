@@ -1,0 +1,29 @@
+﻿@using Barinak.Models.Siniflar
+@model List<Hayvanlar>
+@{
+    ViewData["Title"] = "HayvanListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hayvan Listesi</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Tür</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Adi</td>
+            <td>@x.Turler.TurAd</td>
+            <td><a href="/Admin/HayvanSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/HayvanGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Admin/YeniHayvan/" class="btn btn-primary">Yeni Hayvan</a>

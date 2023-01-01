@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Barinak.Models.Siniflar;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Barinak.Controllers
 {
@@ -17,6 +18,7 @@ namespace Barinak.Controllers
         {
             return View();
         }
+        [HttpPost]
         public IActionResult YeniBlog(Blog p)
         {
             c.Blogs.Add(p);
@@ -78,5 +80,102 @@ namespace Barinak.Controllers
             return RedirectToAction("YorumListesi");
         }
 
+        public IActionResult HayvanListesi()
+        {
+            var hayvanlar = c.Hayvanlars.Include(x=>x.Turler).ToList();
+            return View(hayvanlar);
+        }
+
+        [HttpGet]
+        public IActionResult YeniHayvan()
+        {
+            List<SelectListItem> degerler = (from x in c.Turlers.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = x.TurAd,
+                                                 Value = x.ID.ToString()
+                                             }).ToList();
+            ViewBag.dgr = degerler;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult YeniHayvan(Hayvanlar h)
+        {
+            var hay = c.Turlers.Where(x => x.ID == h.Turler.ID).FirstOrDefault();
+            h.Turler = hay;
+            c.Hayvanlars.Add(h);
+            c.SaveChanges();
+            return RedirectToAction("HayvanListesi");
+        }
+
+        public IActionResult HayvanSil(int id)
+        {
+            var b = c.Hayvanlars.Find(id);
+            c.Hayvanlars.Remove(b);
+            c.SaveChanges();
+            return RedirectToAction("HayvanListesi");
+        }
+
+        public IActionResult HayvanGetir(int id)
+        {
+            var b = c.Hayvanlars.Find(id);
+            return View(b);
+        }
+
+        public IActionResult HayvanGuncelle(Hayvanlar h)
+        {
+            var yrm = c.Hayvanlars.Find(h.ID);
+            yrm.Adi = h.Adi;
+            yrm.Yas = h.Yas;
+            yrm.Cinsiyet = h.Cinsiyet;
+            //yrm.Turid = h.Turid;
+            yrm.FotoUrl = h.FotoUrl;
+            yrm.Aciklama = h.Aciklama;
+            c.SaveChanges();
+            return RedirectToAction("HayvanListesi");
+        }
+
+
+
+        public IActionResult TurListesi()
+        {
+            var turler = c.Turlers.ToList();
+            return View(turler);
+        }
+
+        [HttpGet]
+        public IActionResult YeniTur()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult YeniTur(Turler t)
+        {
+            c.Turlers.Add(t);
+            c.SaveChanges();
+            return RedirectToAction("TurListesi");
+        }
+
+        public IActionResult TurSil(int id)
+        {
+            var b = c.Turlers.Find(id);
+            c.Turlers.Remove(b);
+            c.SaveChanges();
+            return RedirectToAction("TurListesi");
+        }
+
+        public IActionResult TurGetir(int id)
+        {
+            var b = c.Turlers.Find(id);
+            return View(b);
+        }
+
+        public IActionResult TurGuncelle(Turler tur)
+        {
+            var t = c.Turlers.Find(tur.ID);
+            t.TurAd = tur.TurAd;
+            c.SaveChanges();
+            return RedirectToAction("TurListesi");
+        }
     }
 }

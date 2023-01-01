@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Barinak.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230101100315_hayvancins8")]
-    partial class hayvancins8
+    [Migration("20230101103803_0")]
+    partial class _0
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -165,6 +165,8 @@ namespace Barinak.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("Turid");
+
                     b.ToTable("Hayvanlars");
                 });
 
@@ -244,6 +246,17 @@ namespace Barinak.Migrations
                     b.ToTable("iletisims");
                 });
 
+            modelBuilder.Entity("Barinak.Models.Siniflar.Hayvanlar", b =>
+                {
+                    b.HasOne("Barinak.Models.Siniflar.Turler", "Turler")
+                        .WithMany("Hayvanlars")
+                        .HasForeignKey("Turid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Turler");
+                });
+
             modelBuilder.Entity("Barinak.Models.Siniflar.Yorumlar", b =>
                 {
                     b.HasOne("Barinak.Models.Siniflar.Blog", "Blog")
@@ -258,6 +271,11 @@ namespace Barinak.Migrations
             modelBuilder.Entity("Barinak.Models.Siniflar.Blog", b =>
                 {
                     b.Navigation("Yorumlars");
+                });
+
+            modelBuilder.Entity("Barinak.Models.Siniflar.Turler", b =>
+                {
+                    b.Navigation("Hayvanlars");
                 });
 #pragma warning restore 612, 618
         }

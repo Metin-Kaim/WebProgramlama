@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Blog Büncelleme Sayfası</h2>
+<h2>Bilgi Güncelleme Sayfası</h2>
 <br />
 @using(Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
 {
@@ -23,6 +23,6 @@
     @Html.LabelFor(x=>x.Aciklama)
     @Html.TextAreaFor(x=>x.Aciklama,15,1, new {@class="form-control"})
     <br />
-    <button class="btn btn-success">Blog Güncelle</button>
+    <button class="btn btn" style="background-color:#ff6a00">Bilgi Güncelle</button>
 }
 

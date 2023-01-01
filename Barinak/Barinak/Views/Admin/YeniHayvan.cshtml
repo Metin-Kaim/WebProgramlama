@@ -1,0 +1,31 @@
+﻿@model Barinak.Models.Siniflar.Hayvanlar
+@{
+    ViewData["Title"] = "YeniHayvan";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Hayvan Ekleme</h1>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x=>x.Adi)
+    @Html.TextBoxFor(x=>x.Adi, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Yas)
+    @Html.TextBoxFor(x=>x.Yas, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Cinsiyet)
+    @Html.TextBoxFor(x=>x.Cinsiyet, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Turid)
+    @Html.DropDownListFor(x=>x.Turler.ID,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.FotoUrl)
+    @Html.TextBoxFor(x=>x.FotoUrl, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Aciklama)
+    @Html.TextAreaFor(x=>x.Aciklama,15,1, new {@class="form-control"})
+    <br />
+    <button class="btn btn-primary">Hayvan Ekle</button>
+</form>
+
+

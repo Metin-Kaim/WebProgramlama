@@ -24,5 +24,13 @@ namespace Barinak.Controllers
             var hayvanlar = c.Hayvanlars.Where(x=>x.Turid==id).ToList();
             return View(hayvanlar);
 		}
-	}
+
+        public IActionResult HayvanSahiplen(int id)
+        {
+            var b = c.Hayvanlars.Find(id);
+            c.Hayvanlars.Remove(b);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+    }
 }

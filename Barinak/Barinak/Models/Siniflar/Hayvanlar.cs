@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Barinak.Models.Siniflar
 {
@@ -12,6 +13,7 @@ namespace Barinak.Models.Siniflar
 		public string FotoUrl { get; set; }
 		public string Aciklama { get; set; }
 		public int Turid { get; set; }
-		//public virtual Turler Turlers { get; set; }
+		[ForeignKey("Turid")]
+		public virtual Turler Turler { get; set; }
 	}
 }

@@ -7,6 +7,6 @@ namespace Barinak.Models.Siniflar
 		[Key]
 		public int ID { get; set; }
 		public string TurAd { get; set; }
-		//public IList<Hayvanlar> Hayvanlars { get; set; }
+		public ICollection<Hayvanlar> Hayvanlars { get; set; }
 	}
 }

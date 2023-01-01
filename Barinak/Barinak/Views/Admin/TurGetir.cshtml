@@ -1,0 +1,20 @@
+﻿@model Barinak.Models.Siniflar.Turler
+
+@{
+    ViewData["Title"] = "TurGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("TurGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.ID)
+    @Html.TextBoxFor(x=>x.ID,new {@class="form-control"})
+    <br />
+
+    @Html.LabelFor(x=>x.TurAd)
+    @Html.TextBoxFor(x=>x.TurAd,new {@class="form-control"})
+    <br />
+    <button class="btn btn" style="background-color:#ff6a00">Tür Güncelle</button>
+}
+
+

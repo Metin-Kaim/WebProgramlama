@@ -24,12 +24,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmxvZ0dldGlyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/HayvanGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSGF5dmFuR2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/HayvanListesi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSGF5dmFuTGlzdGVzaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/TurGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHVyR2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/TurListesi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHVyTGlzdGVzaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YeniBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cWWVuaUJsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YeniHayvan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cWWVuaUhheXZhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YeniTur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cWWVuaVR1ci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YorumGetir.cshtml]

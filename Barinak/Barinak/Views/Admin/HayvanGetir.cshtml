@@ -1,0 +1,31 @@
+﻿@model Barinak.Models.Siniflar.Hayvanlar
+
+@{
+    ViewData["Title"] = "HayvanGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hayvan Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("HayvanGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.ID)
+    @Html.TextBoxFor(x=>x.ID, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Adi)
+    @Html.TextBoxFor(x=>x.Adi, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Yas)
+    @Html.TextBoxFor(x=>x.Yas, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Cinsiyet)
+    @Html.TextBoxFor(x=>x.Cinsiyet, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.FotoUrl)
+    @Html.TextBoxFor(x=>x.FotoUrl, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Aciklama)
+    @Html.TextAreaFor(x=>x.Aciklama,15,1, new {@class="form-control"})
+    <br />
+    <button class="btn btn-success">Hayvan Güncelle</button>
+}
