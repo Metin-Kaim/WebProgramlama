@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Barinak.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230101165129_ilk")]
+    [Migration("20230101182632_ilk")]
     partial class ilk
     {
         /// <inheritdoc />
@@ -44,71 +44,6 @@ namespace Barinak.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Admins");
-                });
-
-            modelBuilder.Entity("Barinak.Models.Siniflar.AdresBlog", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("Aciklama")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AdresAcik")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Baslik")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Konum")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Mail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Telefon")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("AdresBlogs");
-                });
-
-            modelBuilder.Entity("Barinak.Models.Siniflar.Blog", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("Aciklama")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Baslik")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BlogImage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Tarih")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("Barinak.Models.Siniflar.Hayvanlar", b =>
@@ -149,6 +84,34 @@ namespace Barinak.Migrations
                     b.ToTable("Hayvanlars");
                 });
 
+            modelBuilder.Entity("Barinak.Models.Siniflar.Rehber", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Baslik")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RehberImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Tarih")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Rehbers");
+                });
+
             modelBuilder.Entity("Barinak.Models.Siniflar.Turler", b =>
                 {
                     b.Property<int>("ID")
@@ -174,9 +137,6 @@ namespace Barinak.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("Blogid")
-                        .HasColumnType("int");
-
                     b.Property<string>("KullaniciAdi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -185,13 +145,16 @@ namespace Barinak.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Rehberid")
+                        .HasColumnType("int");
+
                     b.Property<string>("Yorum")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("Blogid");
+                    b.HasIndex("Rehberid");
 
                     b.ToTable("Yorumlars");
                 });
@@ -209,16 +172,16 @@ namespace Barinak.Migrations
 
             modelBuilder.Entity("Barinak.Models.Siniflar.Yorumlar", b =>
                 {
-                    b.HasOne("Barinak.Models.Siniflar.Blog", "Blog")
+                    b.HasOne("Barinak.Models.Siniflar.Rehber", "Rehber")
                         .WithMany("Yorumlars")
-                        .HasForeignKey("Blogid")
+                        .HasForeignKey("Rehberid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Blog");
+                    b.Navigation("Rehber");
                 });
 
-            modelBuilder.Entity("Barinak.Models.Siniflar.Blog", b =>
+            modelBuilder.Entity("Barinak.Models.Siniflar.Rehber", b =>
                 {
                     b.Navigation("Yorumlars");
                 });

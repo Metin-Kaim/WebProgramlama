@@ -1,5 +1,5 @@
 ﻿@using Barinak.Models.Siniflar
-@model List<Blog>
+@model List<Rehber>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -58,7 +58,7 @@
                             <ul class="rslides" id="slider1">
                                 @foreach (var x in Model)
                                 {
-                                    <li><img src="@x.BlogImage" alt="" style="height:380px;width:650px;"></li>
+                                    <li><img src="@x.RehberImage" alt="" style="height:380px;width:650px;"></li>
 
                                 }
                             </ul>

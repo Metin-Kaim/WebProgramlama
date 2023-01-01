@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/BlogGetir.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmxvZ0dldGlyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/HayvanGetir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSGF5dmFuR2V0aXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/RehberGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVoYmVyR2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/TurGetir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHVyR2V0aXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,12 +44,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHVyTGlzdGVzaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YeniBlog.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cWWVuaUJsb2cuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YeniHayvan.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cWWVuaUhheXZhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YeniRehber.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cWWVuaVJlaGJlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YeniTur.cshtml]
@@ -62,18 +62,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Admin/YorumListesi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cWW9ydW1MaXN0ZXNpLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Blog/BlogDetay.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nRGV0YXkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Blog/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Blog/YorumYap.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xZb3J1bVlhcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Default/Index.cshtml]
@@ -98,6 +86,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Rehber/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVoYmVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Rehber/RehberDetay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVoYmVyXFJlaGJlckRldGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Rehber/YorumYap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVoYmVyXFlvcnVtWWFwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Shared/Error.cshtml]

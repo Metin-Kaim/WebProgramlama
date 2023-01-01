@@ -12,42 +12,42 @@ namespace Barinak.Controllers
         Context c=new Context();
         public IActionResult Index()
         {
-            var degerler=c.Blogs.ToList();
+            var degerler=c.Rehbers.ToList();
             return View(degerler);
         }
         [HttpGet]
-        public IActionResult YeniBlog()
+        public IActionResult YeniRehber()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult YeniBlog(Blog p)
+        public IActionResult YeniRehber(Rehber p)
         {
-            c.Blogs.Add(p);
+            c.Rehbers.Add(p);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public IActionResult BlogSil(int id)
+        public IActionResult RehberSil(int id)
         {
-            var b=c.Blogs.Find(id);
-            c.Blogs.Remove(b);
+            var b=c.Rehbers.Find(id);
+            c.Rehbers.Remove(b);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public IActionResult BlogGetir(int id)
+        public IActionResult RehberGetir(int id)
         {
-            var b=c.Blogs.Find(id);
+            var b=c.Rehbers.Find(id);
             return View(b);
         }
 
-        public IActionResult BlogGuncelle(Blog b)
+        public IActionResult RehberGuncelle(Rehber b)
         {
-            var blg = c.Blogs.Find(b.ID);
+            var blg = c.Rehbers.Find(b.ID);
             blg.Aciklama=b.Aciklama;
             blg.Baslik=b.Baslik;
-            blg.BlogImage=b.BlogImage;
+            blg.RehberImage=b.RehberImage;
             blg.Tarih=b.Tarih;
             c.SaveChanges();
             return RedirectToAction("Index");
@@ -55,7 +55,7 @@ namespace Barinak.Controllers
 
         public IActionResult YorumListesi()
         {
-            var yorumlar = c.Yorumlars.Include(x => x.Blog).ToList();
+            var yorumlar = c.Yorumlars.Include(x => x.Rehber).ToList();
             return View(yorumlar);
         }
 

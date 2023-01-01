@@ -15,7 +15,7 @@ namespace Barinak.Controllers
         Context c = new Context();
         public IActionResult Index()
         {
-            var degerler=c.Blogs.OrderByDescending(x=>x.ID).Take(6).ToList();//for slider
+            var degerler=c.Rehbers.OrderByDescending(x=>x.ID).Take(6).ToList();//for slider
             return View(degerler);
         }
 

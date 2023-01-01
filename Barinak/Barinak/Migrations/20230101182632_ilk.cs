@@ -26,25 +26,7 @@ namespace Barinak.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AdresBlogs",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Baslik = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Aciklama = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AdresAcik = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Mail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telefon = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Konum = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AdresBlogs", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Blogs",
+                name: "Rehbers",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -52,11 +34,11 @@ namespace Barinak.Migrations
                     Baslik = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Tarih = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Aciklama = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BlogImage = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    RehberImage = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Blogs", x => x.ID);
+                    table.PrimaryKey("PK_Rehbers", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -81,15 +63,15 @@ namespace Barinak.Migrations
                     KullaniciAdi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Mail = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Yorum = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Blogid = table.Column<int>(type: "int", nullable: false)
+                    Rehberid = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Yorumlars", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Yorumlars_Blogs_Blogid",
-                        column: x => x.Blogid,
-                        principalTable: "Blogs",
+                        name: "FK_Yorumlars_Rehbers_Rehberid",
+                        column: x => x.Rehberid,
+                        principalTable: "Rehbers",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -124,9 +106,9 @@ namespace Barinak.Migrations
                 column: "Turid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Yorumlars_Blogid",
+                name: "IX_Yorumlars_Rehberid",
                 table: "Yorumlars",
-                column: "Blogid");
+                column: "Rehberid");
         }
 
         /// <inheritdoc />
@@ -134,9 +116,6 @@ namespace Barinak.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Admins");
-
-            migrationBuilder.DropTable(
-                name: "AdresBlogs");
 
             migrationBuilder.DropTable(
                 name: "Hayvanlars");
@@ -148,7 +127,7 @@ namespace Barinak.Migrations
                 name: "Turlers");
 
             migrationBuilder.DropTable(
-                name: "Blogs");
+                name: "Rehbers");
         }
     }
 }

@@ -1,12 +1,12 @@
-﻿@model Barinak.Models.Siniflar.Blog
+﻿@model Barinak.Models.Siniflar.Rehber
 @{
-    ViewData["Title"] = "BlogGetir";
+    ViewData["Title"] = "RehberGetir";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Bilgi Güncelleme Sayfası</h2>
 <br />
-@using(Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
+@using(Html.BeginForm("RehberGuncelle", "Admin", FormMethod.Post))
 {
     @Html.LabelFor(x=>x.ID)
     @Html.TextBoxFor(x=>x.ID, new {@class="form-control"})
@@ -17,8 +17,8 @@
     @Html.LabelFor(x=>x.Tarih)
     @Html.TextBoxFor(x=>x.Tarih, new {@class="form-control"})
     <br />
-    @Html.LabelFor(x=>x.BlogImage)
-    @Html.TextBoxFor(x=>x.BlogImage, new {@class="form-control"})
+    @Html.LabelFor(x=>x.RehberImage)
+    @Html.TextBoxFor(x=>x.RehberImage, new {@class="form-control"})
     <br />
     @Html.LabelFor(x=>x.Aciklama)
     @Html.TextAreaFor(x=>x.Aciklama,15,1, new {@class="form-control"})

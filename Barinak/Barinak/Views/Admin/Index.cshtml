@@ -1,5 +1,5 @@
 ﻿@using Barinak.Models.Siniflar
-@model List<Blog>
+@model List<Rehber>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -19,11 +19,11 @@
         <tr>
             <td>@x.ID</td>
             <td>@x.Baslik</td>
-            <td><a href="/Admin/BlogSil/@x.ID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Admin/BlogGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Admin/RehberSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/RehberGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
         </tr>
     }
 
 </table>
-<a href="/Admin/YeniBlog/" class="btn btn-primary">Yeni Bilgi</a>
+<a href="/Admin/YeniRehber/" class="btn btn-primary">Yeni Bilgi</a>
 
