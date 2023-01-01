@@ -321,30 +321,6 @@
       "PackagePath": "staticwebassets\\web2\\w3layouts-License.txt"
     },
     {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web3\\css\\style.css",
-      "PackagePath": "staticwebassets\\web3\\css\\style.css"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web3\\fonts\\Asap-Regular.ttf",
-      "PackagePath": "staticwebassets\\web3\\fonts\\Asap-Regular.ttf"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web3\\fonts\\Audiowide-Regular.ttf",
-      "PackagePath": "staticwebassets\\web3\\fonts\\Audiowide-Regular.ttf"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web3\\images\\b4.jpg",
-      "PackagePath": "staticwebassets\\web3\\images\\b4.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web3\\index.html",
-      "PackagePath": "staticwebassets\\web3\\index.html"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web3\\w3layouts-License.txt",
-      "PackagePath": "staticwebassets\\web3\\w3layouts-License.txt"
-    },
-    {
       "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\about.html",
       "PackagePath": "staticwebassets\\web\\about.html"
     },

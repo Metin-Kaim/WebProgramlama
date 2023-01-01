@@ -2,9 +2,11 @@
 using Barinak.Models.Siniflar;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Barinak.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         Context c=new Context();

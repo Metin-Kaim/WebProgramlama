@@ -1,9 +1,11 @@
 ﻿using Barinak.Models.Siniflar;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Barinak.Controllers
 {
-	public class HayvanController : Controller
+    [Authorize]
+    public class HayvanController : Controller
 	{
 		Context c=new Context();
 

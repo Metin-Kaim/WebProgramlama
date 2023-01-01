@@ -1,9 +1,11 @@
 ﻿using Barinak.Models.Siniflar;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Barinak.Controllers
 {
-	public class BlogController : Controller
+    [Authorize]
+    public class BlogController : Controller
 	{
 		Context c = new Context();
         BlogYorum by = new BlogYorum();
