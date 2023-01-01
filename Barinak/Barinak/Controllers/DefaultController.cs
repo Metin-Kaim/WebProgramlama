@@ -19,11 +19,6 @@ namespace Barinak.Controllers
             return View(degerler);
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
-
         public async Task<IActionResult> LogOut()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

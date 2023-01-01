@@ -16,7 +16,7 @@ namespace Barinak.Controllers
             ClaimsPrincipal claimUser = HttpContext.User;
 
             if(claimUser.Identity.IsAuthenticated)
-                return RedirectToAction("Index", "Default");
+                return RedirectToAction("Index", "Admin");
 
             return View();
         }

@@ -22,8 +22,9 @@ namespace Barinak.Controllers
 			ViewBag.ID = id;
 			by.Deger1=c.Blogs.Where(x=>x.ID==id).ToList();
 			by.Deger2=c.Yorumlars.Where(x=>x.Blogid==id).ToList();
-			//var blogBul=c.Blogs.Where(x=>x.ID==id).ToList();
-			return View(by);
+            by.Deger3 = c.Blogs.OrderByDescending(x => x.ID).Take(5).ToList();
+            //var blogBul=c.Blogs.Where(x=>x.ID==id).ToList();
+            return View(by);
 		}
 
 		[HttpGet]

@@ -341,12 +341,16 @@
       "PackagePath": "staticwebassets\\web\\destinations.html"
     },
     {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\about_banner.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\about_banner.jpg"
+      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\Barinak.png",
+      "PackagePath": "staticwebassets\\web\\images\\Barinak.png"
     },
     {
       "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\arrows.png",
       "PackagePath": "staticwebassets\\web\\images\\arrows.png"
+    },
+    {
+      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\asi.png",
+      "PackagePath": "staticwebassets\\web\\images\\asi.png"
     },
     {
       "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\but.png",
@@ -357,22 +361,6 @@
       "PackagePath": "staticwebassets\\web\\images\\contact.png"
     },
     {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\dest_banner.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\dest_banner.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\flight.png",
-      "PackagePath": "staticwebassets\\web\\images\\flight.png"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\glass.png",
-      "PackagePath": "staticwebassets\\web\\images\\glass.png"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\group.png",
-      "PackagePath": "staticwebassets\\web\\images\\group.png"
-    },
-    {
       "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\head_bg.jpg",
       "PackagePath": "staticwebassets\\web\\images\\head_bg.jpg"
     },
@@ -381,24 +369,8 @@
       "PackagePath": "staticwebassets\\web\\images\\head_bot.gif"
     },
     {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\img1.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\img1.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\img2.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\img2.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\img3.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\img3.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\img4.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\img4.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\key.png",
-      "PackagePath": "staticwebassets\\web\\images\\key.png"
+      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\kemik.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\kemik.jpg"
     },
     {
       "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\link1-bg.gif",
@@ -409,48 +381,12 @@
       "PackagePath": "staticwebassets\\web\\images\\logo.png"
     },
     {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic.jpg"
+      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pati.png",
+      "PackagePath": "staticwebassets\\web\\images\\pati.png"
     },
     {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic1.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic1.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic10.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic10.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic2.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic2.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic3.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic3.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic4.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic4.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic5.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic5.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic6.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic6.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic7.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic7.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic8.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic8.jpg"
-    },
-    {
-      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\pic9.jpg",
-      "PackagePath": "staticwebassets\\web\\images\\pic9.jpg"
+      "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\images\\tasma.png",
+      "PackagePath": "staticwebassets\\web\\images\\tasma.png"
     },
     {
       "Id": "D:\\Projeler\\Aspnet_Core_MVC\\Barinak\\Barinak\\wwwroot\\web\\index.html",
