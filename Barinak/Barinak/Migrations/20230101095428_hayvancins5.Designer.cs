@@ -4,6 +4,7 @@ using Barinak.Models.Siniflar;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Barinak.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230101095428_hayvancins5")]
+    partial class hayvancins5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -156,11 +159,16 @@ namespace Barinak.Migrations
                     b.Property<int>("Turid")
                         .HasColumnType("int");
 
+                    b.Property<int>("TurlersID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Yas")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("TurlersID");
 
                     b.ToTable("Hayvanlars");
                 });
@@ -241,6 +249,17 @@ namespace Barinak.Migrations
                     b.ToTable("iletisims");
                 });
 
+            modelBuilder.Entity("Barinak.Models.Siniflar.Hayvanlar", b =>
+                {
+                    b.HasOne("Barinak.Models.Siniflar.Turler", "Turlers")
+                        .WithMany("Hayvanlars")
+                        .HasForeignKey("TurlersID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Turlers");
+                });
+
             modelBuilder.Entity("Barinak.Models.Siniflar.Yorumlar", b =>
                 {
                     b.HasOne("Barinak.Models.Siniflar.Blog", "Blog")
@@ -255,6 +274,11 @@ namespace Barinak.Migrations
             modelBuilder.Entity("Barinak.Models.Siniflar.Blog", b =>
                 {
                     b.Navigation("Yorumlars");
+                });
+
+            modelBuilder.Entity("Barinak.Models.Siniflar.Turler", b =>
+                {
+                    b.Navigation("Hayvanlars");
                 });
 #pragma warning restore 612, 618
         }

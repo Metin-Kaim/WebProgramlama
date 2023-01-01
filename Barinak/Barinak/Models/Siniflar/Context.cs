@@ -11,6 +11,8 @@ namespace Barinak.Models.Siniflar
 		public DbSet<Hakkimizda> Hakkimizdas { get; set; }
 		public DbSet<iletisim> iletisims { get; set; }
 		public DbSet<Yorumlar> Yorumlars { get; set; }
+		public DbSet<Hayvanlar> Hayvanlars { get; set; }
+		public DbSet<Turler> Turlers { get; set; }
 		
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{

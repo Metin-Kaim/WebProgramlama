@@ -64,6 +64,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lyaXNZYXBcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Hayvan/HayvanDetay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGF5dmFuXEhheXZhbkRldGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Hayvan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGF5dmFuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Hayvan/SeciliHayvan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGF5dmFuXFNlY2lsaUhheXZhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projeler/Aspnet_Core_MVC/Barinak/Barinak/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

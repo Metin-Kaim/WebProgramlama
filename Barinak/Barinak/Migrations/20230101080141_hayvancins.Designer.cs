@@ -4,6 +4,7 @@ using Barinak.Models.Siniflar;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Barinak.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230101080141_hayvancins")]
+    partial class hayvancins
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -108,6 +111,23 @@ namespace Barinak.Migrations
                     b.ToTable("Blogs");
                 });
 
+            modelBuilder.Entity("Barinak.Models.Siniflar.Cinsler", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("CinsAd")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Cinslers");
+                });
+
             modelBuilder.Entity("Barinak.Models.Siniflar.Hakkimizda", b =>
                 {
                     b.Property<int>("ID")
@@ -145,15 +165,14 @@ namespace Barinak.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Cinsid")
+                        .HasColumnType("int");
+
                     b.Property<string>("Cinsiyet")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FotoUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Turid")
+                    b.Property<int>("CinslerID")
                         .HasColumnType("int");
 
                     b.Property<string>("Yas")
@@ -162,24 +181,9 @@ namespace Barinak.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("CinslerID");
+
                     b.ToTable("Hayvanlars");
-                });
-
-            modelBuilder.Entity("Barinak.Models.Siniflar.Turler", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<string>("TurAd")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Turlers");
                 });
 
             modelBuilder.Entity("Barinak.Models.Siniflar.Yorumlar", b =>
@@ -241,6 +245,17 @@ namespace Barinak.Migrations
                     b.ToTable("iletisims");
                 });
 
+            modelBuilder.Entity("Barinak.Models.Siniflar.Hayvanlar", b =>
+                {
+                    b.HasOne("Barinak.Models.Siniflar.Cinsler", "Cinsler")
+                        .WithMany("Hayvanlars")
+                        .HasForeignKey("CinslerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cinsler");
+                });
+
             modelBuilder.Entity("Barinak.Models.Siniflar.Yorumlar", b =>
                 {
                     b.HasOne("Barinak.Models.Siniflar.Blog", "Blog")
@@ -255,6 +270,11 @@ namespace Barinak.Migrations
             modelBuilder.Entity("Barinak.Models.Siniflar.Blog", b =>
                 {
                     b.Navigation("Yorumlars");
+                });
+
+            modelBuilder.Entity("Barinak.Models.Siniflar.Cinsler", b =>
+                {
+                    b.Navigation("Hayvanlars");
                 });
 #pragma warning restore 612, 618
         }
